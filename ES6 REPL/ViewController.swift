@@ -7,13 +7,25 @@
 //
 
 import Cocoa
+import WebKit
 
 class ViewController: NSViewController {
+    
+    // MARK: IBOutlets
+    @IBOutlet var webview: WebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let url: NSURL! = NSBundle.mainBundle().URLForResource("repl", withExtension: "html")
+        
+        do {
+            let fileContent = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding) as String
+            
+            webview.mainFrame.loadHTMLString(fileContent, baseURL:nil)
+        } catch let error as NSError {
+            print("Error: \(error)")
+        }
     }
 
     override var representedObject: AnyObject? {

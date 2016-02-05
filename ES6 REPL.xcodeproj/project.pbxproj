@@ -14,6 +14,8 @@
 		384E6A5D1C64973400CAD7AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384E6A5B1C64973400CAD7AF /* Main.storyboard */; };
 		384E6A681C64973400CAD7AF /* ES6_REPLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E6A671C64973400CAD7AF /* ES6_REPLTests.swift */; };
 		384E6A731C64973400CAD7AF /* ES6_REPLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E6A721C64973400CAD7AF /* ES6_REPLUITests.swift */; };
+		384E6A811C6497AA00CAD7AF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384E6A801C6497AA00CAD7AF /* WebKit.framework */; };
+		384E6A831C649B4B00CAD7AF /* repl.html in Resources */ = {isa = PBXBuildFile; fileRef = 384E6A821C649B4B00CAD7AF /* repl.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		384E6A6E1C64973400CAD7AF /* ES6 REPLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ES6 REPLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384E6A721C64973400CAD7AF /* ES6_REPLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ES6_REPLUITests.swift; sourceTree = "<group>"; };
 		384E6A741C64973400CAD7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		384E6A801C6497AA00CAD7AF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		384E6A821C649B4B00CAD7AF /* repl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = repl.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384E6A811C6497AA00CAD7AF /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		384E6A471C64973400CAD7AF = {
 			isa = PBXGroup;
 			children = (
+				384E6A801C6497AA00CAD7AF /* WebKit.framework */,
 				384E6A521C64973400CAD7AF /* ES6 REPL */,
 				384E6A661C64973400CAD7AF /* ES6 REPLTests */,
 				384E6A711C64973400CAD7AF /* ES6 REPLUITests */,
@@ -103,6 +109,7 @@
 				384E6A591C64973400CAD7AF /* Assets.xcassets */,
 				384E6A5B1C64973400CAD7AF /* Main.storyboard */,
 				384E6A5E1C64973400CAD7AF /* Info.plist */,
+				384E6A821C649B4B00CAD7AF /* repl.html */,
 			);
 			path = "ES6 REPL";
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				384E6A5A1C64973400CAD7AF /* Assets.xcassets in Resources */,
+				384E6A831C649B4B00CAD7AF /* repl.html in Resources */,
 				384E6A5D1C64973400CAD7AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +399,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "ES6 REPL/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.priithaamer.ES6-REPL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -403,6 +412,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "ES6 REPL/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.priithaamer.ES6-REPL";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -479,6 +489,7 @@
 				384E6A791C64973400CAD7AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		384E6A7A1C64973400CAD7AF /* Build configuration list for PBXNativeTarget "ES6 REPLTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +498,7 @@
 				384E6A7C1C64973400CAD7AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		384E6A7D1C64973400CAD7AF /* Build configuration list for PBXNativeTarget "ES6 REPLUITests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +507,7 @@
 				384E6A7F1C64973400CAD7AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
