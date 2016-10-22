@@ -17,10 +17,10 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url: NSURL! = NSBundle.mainBundle().URLForResource("repl", withExtension: "html")
+        let url: URL! = Bundle.main.url(forResource: "repl", withExtension: "html")
         
         do {
-            let fileContent = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding) as String
+            let fileContent = try NSString(contentsOf: url, encoding: String.Encoding.utf8.rawValue) as String
             
             webview.mainFrame.loadHTMLString(fileContent, baseURL:nil)
         } catch let error as NSError {
@@ -28,7 +28,7 @@ class ViewController: NSViewController {
         }
     }
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }

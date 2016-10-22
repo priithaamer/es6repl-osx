@@ -15,7 +15,7 @@ class Document: NSDocument {
         // Add your subclass-specific initialization here.
     }
 
-    override func windowControllerDidLoadNib(aController: NSWindowController) {
+    override func windowControllerDidLoadNib(_ aController: NSWindowController) {
         super.windowControllerDidLoadNib(aController)
         // Add any code here that needs to be executed once the windowController has loaded the document's window.
     }
@@ -27,17 +27,17 @@ class Document: NSDocument {
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
+        let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
     }
 
-    override func fileWrapperOfType(typeName: String) throws -> NSFileWrapper {
+    override func fileWrapper(ofType typeName: String) throws -> FileWrapper {
         let data = ""
         
-        return NSFileWrapper(regularFileWithContents: data.dataUsingEncoding(NSUTF8StringEncoding)!)
+        return FileWrapper(regularFileWithContents: data.data(using: String.Encoding.utf8)!)
     }
     
-    override func readFromFileWrapper(fileWrapper: NSFileWrapper, ofType typeName: String) throws {
+    override func read(from fileWrapper: FileWrapper, ofType typeName: String) throws {
 //        if let data = fileWrapper.regularFileContents {
 //            var jsonerror: NSError?
 //            
